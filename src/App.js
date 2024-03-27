@@ -4,6 +4,9 @@ import ProductAll from "./Page/ProductAll";
 import ProductDetail from "./Page/ProductDetail";
 import { Routes, Route } from "react-router-dom";
 import Navbar from "./component/Navbar";
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+
 
 //1. [페이지] 전체상품페이지, 로그인페이지, 상품상세페이지
 //1-1. [네브바]
