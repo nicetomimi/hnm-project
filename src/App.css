@@ -1,0 +1,43 @@
+.login-area{
+  display:flex;
+  justify-content: end;
+  align-items: center;
+  margin: 2em;
+  gap: 0.5em;
+}
+
+.logo-area{
+  display:flex;
+  justify-content: center;
+}
+
+.menu-area{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-list{
+  display:flex;
+  list-style-type: none;
+}
+
+.menu-list li{
+  padding: 1em;
+}
+
+.search-area{
+  position: absolute;
+  right: 2em;
+  border-bottom: 1px solid black;
+  padding: 0.5em;
+}
+
+input{
+ border: 0;
+ margin-left: 0.5em;
+}
+
+input:focus{
+  outline: 0;
+}
