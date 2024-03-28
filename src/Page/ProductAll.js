@@ -7,7 +7,7 @@ const ProductAll = () => {
     const [productList, setProductList] = useState([])
 
     const getProduct = async() => {
-        let url ='https://my-json-server.typicode.com/nicetomina/noona-hnm/products'
+        let url ='https://my-json-server.typicode.com/nicetomina/hnm-project/products'
         let response = await fetch(url)
         let data = await response.json()
         setProductList(data)
