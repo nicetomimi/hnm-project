@@ -152,6 +152,7 @@ input:focus {
 
 .login-page {
   padding: 2em;
+  margin-top: 2em;
 }
 
 .login-title-area {
@@ -168,4 +169,45 @@ input:focus {
   display: flex;
   justify-content: center;
   padding: 2em;
+}
+
+.mobile-menu{
+  display: none;
+}
+
+@media screen and (max-width: 1200px) {
+  .main-banner-text-area{
+    position: absolute;
+    top: 4em;
+    left: 0.2em;
+    font-family: "Pretendard-Regular";
+    font-weight: 700;
+    font-size: 8em;
+  }
+  .menu-area{
+    display: none;
+  }
+
+  .mobile-menu{
+    display: flex;
+    gap : 1em;
+    position: absolute;
+    top:2em;
+    left: 2em;
+  }
+  .search-area{
+    display: none;
+  }
+}
+
+
+@media screen and (max-width: 720px) {
+  .main-banner-text-area{
+    position: absolute;
+    top: 4.5em;
+    left: 0.2em;
+    font-family: "Pretendard-Regular";
+    font-weight: 700;
+    font-size: 4em;
+  }
 }

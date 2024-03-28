@@ -2,6 +2,7 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser } from "@fortawesome/free-regular-svg-icons";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { useNavigate } from "react-router-dom";
 
 const Navbar = ({ authenticate, setAuthenticate }) => {
@@ -22,24 +23,34 @@ const Navbar = ({ authenticate, setAuthenticate }) => {
     navigate("/login");
   };
 
-const goToLogout = () => {
-        if (window.confirm('정말 로그아웃 하시겠습니까?')) {
-            setAuthenticate(false);
-            navigate('/');
-        }
-      }
+  const goToLogout = () => {
+    if (window.confirm("정말 로그아웃 하시겠습니까?")) {
+      setAuthenticate(false);
+      navigate("/");
+    }
+  };
 
   const goToHome = () => {
     navigate("/");
   };
 
+
   return (
     <div>
       <div className="navbar-all-area">
+
+        <div className="mobile-menu">
+          <div><FontAwesomeIcon icon={faBars} /></div>
+          <div><FontAwesomeIcon icon={faSearch} /></div>
+        </div>
+
         <div>
-          <div className="login-area" onClick={authenticate ? goToLogout : goToLogin}>
+          <div
+            className="login-area"
+            onClick={authenticate ? goToLogout : goToLogin}
+          >
             <FontAwesomeIcon icon={faUser} />
-            <div>{ authenticate ? "로그아웃" : "로그인"}</div>
+            <div>{authenticate ? "로그아웃" : "로그인"}</div>
           </div>
         </div>
 

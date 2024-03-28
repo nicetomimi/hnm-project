@@ -26,7 +26,7 @@ const ProductAll = () => {
       <Container>
         <Row>
           {productList.map((menu) => (
-              <Col lg={3}>
+              <Col lg={3} sm={6}>
                 {" "}
                 <ProductCard item={menu} />{" "}
               </Col>
