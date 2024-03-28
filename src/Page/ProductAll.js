@@ -7,7 +7,7 @@ const ProductAll = () => {
     const [productList, setProductList] = useState([])
 
     const getProduct = async() => {
-        let url ='https://my-json-server.typicode.com/nicetomina/hnm-project/products'
+        let url ='https://my-json-server.typicode.com/nicetomimi/hnm-project/products'
         let response = await fetch(url)
         let data = await response.json()
         setProductList(data)
@@ -19,9 +19,9 @@ const ProductAll = () => {
     <div>
         <Container>
             <Row>
-            {productList.map((menu)=>(
+            {productList && productList.map((menu)=>{
                 <Col lg={3}> <ProductCard item={menu}/> </Col>
-            ))}
+            })}
             </Row>
         </Container>
     </div>
