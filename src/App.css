@@ -1,42 +1,171 @@
-.login-area{
-  display:flex;
+@font-face {
+  font-family: "Pretendard-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+    format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+.navbar-all-area {
+  margin-bottom: 1em;
+}
+
+.login-area {
+  display: flex;
   justify-content: end;
   align-items: center;
-  margin: 2em;
+  margin-top: 2em;
+  margin-right: 2em;
   gap: 0.5em;
+  font-family: "Pretendard-Regular";
+  cursor: pointer;
 }
 
-.logo-area{
-  display:flex;
+.logo-area {
+  display: flex;
   justify-content: center;
+  cursor: pointer;
 }
 
-.menu-area{
-  display:flex;
+.menu-area {
+  display: flex;
   justify-content: center;
+  align-items: center;
+  font-family: "Pretendard-Regular";
+  position: relative;
+  height: 4em;
 }
 
-.menu-list{
-  display:flex;
+.menu-list {
+  display: flex;
   list-style-type: none;
+  cursor: pointer;
+  margin: 0;
 }
 
-.menu-list li{
-  padding: 1em;
+.menu-list li {
+  margin: 1em;
 }
 
-.search-area{
+.menu-list li:hover {
+  border-bottom: 1px solid black;
+}
+
+.search-area {
   position: absolute;
   right: 2em;
   border-bottom: 1px solid black;
   padding: 0.5em;
 }
 
-input{
- border: 0;
- margin-left: 0.5em;
+input {
+  border: 0;
+  padding-left: 0.5em;
 }
 
-input:focus{
+input:focus {
   outline: 0;
+}
+
+.main-banner-area {
+  margin-bottom: 3em;
+}
+
+.main-banner-area img {
+  width: 100vw;
+}
+
+.main-banner-text-area {
+  position: absolute;
+  top: 3.5em;
+  left: 0.2em;
+  font-family: "Pretendard-Regular";
+  font-weight: 700;
+  font-size: 10em;
+}
+
+.product-card-area {
+  font-family: "Pretendard-Regular";
+  margin: 1em;
+}
+
+.product-img-area {
+  margin-bottom: 0.5em;
+  cursor: pointer;
+  width: 300px;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+.product-img-area img {
+  width: 100%;
+  transition: transform 0.5s;
+}
+
+.product-img-area img:hover {
+  transform: scale(1.1);
+  transition: transform 0.5s;
+}
+
+.new-icon {
+  display: inline;
+  background-color: rgb(255, 0, 0);
+  color: white;
+  font-size: 0.8rem;
+  margin-left: 0.2em;
+}
+
+.conscious-choice-icon {
+  display: inline;
+  background-color: rgb(14, 175, 135);
+  color: white;
+  font-size: 0.8rem;
+  margin-left: 0.2em;
+}
+
+.footer-area {
+  height: 220px;
+  width: 100vw;
+  background-color: rgb(247, 247, 247);
+  margin-top: 2em;
+  padding: 4em;
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+.sns-icon-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1em;
+  gap: 1em;
+}
+
+.footer-menu-list {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  cursor: pointer;
+  margin-bottom: 2em;
+  gap: 2em;
+}
+
+.login-page {
+  padding: 2em;
+}
+
+.login-title-area {
+  font-family: "Pretendard-Regular";
+  text-align: center;
+}
+
+.login-title-area h2 {
+  font-weight: 700;
+}
+
+.login-container {
+  font-family: "Pretendard-Regular";
+  display: flex;
+  justify-content: center;
+  padding: 2em;
 }
