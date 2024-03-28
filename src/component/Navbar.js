@@ -27,6 +27,7 @@ const Navbar = () => {
 
       <div className="logo-area">
         <img
+          alt=""
           width={100}
           src="https://churchillsquare.com/wp-content/uploads/2018/05/h-m.png"
         />
