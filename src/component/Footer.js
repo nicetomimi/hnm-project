@@ -25,10 +25,7 @@ const Footer = () => {
           ))}
         </ul>
       
-      <div>
-        이 사이트의 콘텐츠는 코딩 알려주는 누나 리액트 스터디 프로젝트를
-        기반합니다.
-      </div>
+
 
       <div className="sns-icon-area">
         <div>
@@ -51,11 +48,7 @@ const Footer = () => {
         width={60}
         src="https://churchillsquare.com/wp-content/uploads/2018/05/h-m.png"
       />
-      <img
-        alt=""
-        width={160}
-        src="https://import.cdn.thinkific.com/cdn-cgi/image/width=384,dpr=1,onerror=redirect/523761%2Fcustom_site_themes%2Fid%2FKSA4UpqrRVydmfeSDXVJ_KakaoTalk_20231101_091017834.png"
-      />
+
     </div>
   );
 };
