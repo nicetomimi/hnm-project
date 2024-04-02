@@ -7,9 +7,17 @@ import { faX } from "@fortawesome/free-solid-svg-icons";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { useEffect } from "react";
+import { authenticateAction } from "../redux/actions/authenticateAction";
+import { useDispatch } from "react-redux";
 
-const Navbar = ({ authenticate, setAuthenticate }) => {
-  // 메뉴 배열 만들어주기
+
+const Navbar = () => {
+
+  const dispatch = useDispatch()
+  const loginState = () => {
+    dispatch(authenticateAction.login())  
+  };
+
   const menuList = [
     "Women",
     "Men",
@@ -28,7 +36,7 @@ const Navbar = ({ authenticate, setAuthenticate }) => {
 
   const goToLogout = () => {
     if (window.confirm("정말 로그아웃 하시겠습니까?")) {
-      setAuthenticate(false);
+      loginState();
       navigate("/");
     }
   };
@@ -85,10 +93,10 @@ const Navbar = ({ authenticate, setAuthenticate }) => {
         <div>
           <div
             className="login-area"
-            onClick={authenticate ? goToLogout : goToLogin}
+            onClick={loginState(true) ? goToLogout : goToLogin}
           >
             <FontAwesomeIcon icon={faUser} />
-            <div>{authenticate ? "로그아웃" : "로그인"}</div>
+            <div>{loginState(true) ? "로그아웃" : "로그인"}</div>
           </div>
         </div>
 
