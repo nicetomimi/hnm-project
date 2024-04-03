@@ -1,15 +1,14 @@
 import { Container, Row, Col } from "react-bootstrap";
-import { productAction } from "../redux/actions/productAction";
 import { useDispatch, useSelector } from "react-redux";
+import { getProductDetailOne } from "../redux/reducers/productSlice";
 
 const ProductDetail = () => {
   const product = useSelector((state) => state.product.selectedItem);
   const dispatch = useDispatch();
   const getProductDetail = () => {
-    let id = ""
-    dispatch(productAction.getProductDetail(id));
+    let id = "";
+    dispatch(getProductDetailOne(id));
   };
-
 
   return (
     <Container>
